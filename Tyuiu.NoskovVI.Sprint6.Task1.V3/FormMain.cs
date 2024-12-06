@@ -43,9 +43,5 @@ namespace Tyuiu.NoskovVI.Sprint6.Task1.V3
             }
         }
 
-        private void vScrollBarResult_NVI_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
     }
 }

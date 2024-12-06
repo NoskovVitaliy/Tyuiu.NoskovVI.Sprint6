@@ -182,6 +182,7 @@
             Font = new Font("Leelawadee UI", 9F);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 6 | Таск 0 | Вариант 9 | Носков В. И.";
             groupBoxInput_NVI.ResumeLayout(false);
             groupBoxInput_NVI.PerformLayout();

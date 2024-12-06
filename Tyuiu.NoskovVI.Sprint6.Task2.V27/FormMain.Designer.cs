@@ -1,4 +1,7 @@
-﻿namespace Tyuiu.NoskovVI.Sprint6.Task1.V3
+﻿using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace Tyuiu.NoskovVI.Sprint6.Task2.V27
 {
     partial class FormMain
     {
@@ -28,6 +31,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxData_NVI = new GroupBox();
             textBoxEnd_NVI = new TextBox();
             textBoxStart_NVI = new TextBox();
@@ -37,12 +47,19 @@
             groupBoxTask_NVi = new GroupBox();
             textBox1 = new TextBox();
             groupBoxResult_NVI = new GroupBox();
+            dataGridViewFunction_NVI = new DataGridView();
             labelResult_NVI = new Label();
-            textBoxResult_NVI = new TextBox();
             buttonDone_NVI = new Button();
+            chartFunction_NVI = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            formMainBindingSource = new BindingSource(components);
+            ColumnForX_NVI = new DataGridViewTextBoxColumn();
+            ColumnForFunction_NVI = new DataGridViewTextBoxColumn();
             groupBoxData_NVI.SuspendLayout();
             groupBoxTask_NVi.SuspendLayout();
             groupBoxResult_NVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFunction_NVI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)formMainBindingSource).BeginInit();
             SuspendLayout();
             // 
             // groupBoxData_NVI
@@ -135,15 +152,51 @@
             // 
             // groupBoxResult_NVI
             // 
+            groupBoxResult_NVI.Controls.Add(dataGridViewFunction_NVI);
             groupBoxResult_NVI.Controls.Add(labelResult_NVI);
-            groupBoxResult_NVI.Controls.Add(textBoxResult_NVI);
             groupBoxResult_NVI.Font = new Font("Segoe UI", 9F);
             groupBoxResult_NVI.Location = new Point(585, 12);
             groupBoxResult_NVI.Name = "groupBoxResult_NVI";
-            groupBoxResult_NVI.Size = new Size(281, 434);
+            groupBoxResult_NVI.Size = new Size(645, 434);
             groupBoxResult_NVI.TabIndex = 3;
             groupBoxResult_NVI.TabStop = false;
             groupBoxResult_NVI.Text = "Вывод данных";
+            // 
+            // dataGridViewFunction_NVI
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewFunction_NVI.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewFunction_NVI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewFunction_NVI.Columns.AddRange(new DataGridViewColumn[] { ColumnForX_NVI, ColumnForFunction_NVI });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewFunction_NVI.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewFunction_NVI.Location = new Point(6, 46);
+            dataGridViewFunction_NVI.Name = "dataGridViewFunction_NVI";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewFunction_NVI.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewFunction_NVI.RowHeadersVisible = false;
+            dataGridViewFunction_NVI.RowHeadersWidth = 51;
+            dataGridViewFunction_NVI.ScrollBars = ScrollBars.Vertical;
+            dataGridViewFunction_NVI.Size = new Size(188, 380);
+            dataGridViewFunction_NVI.TabIndex = 2;
             // 
             // labelResult_NVI
             // 
@@ -155,21 +208,10 @@
             labelResult_NVI.TabIndex = 1;
             labelResult_NVI.Text = "Результат";
             // 
-            // textBoxResult_NVI
-            // 
-            textBoxResult_NVI.BorderStyle = BorderStyle.None;
-            textBoxResult_NVI.Font = new Font("Consolas", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxResult_NVI.Location = new Point(6, 46);
-            textBoxResult_NVI.Multiline = true;
-            textBoxResult_NVI.Name = "textBoxResult_NVI";
-            textBoxResult_NVI.ReadOnly = true;
-            textBoxResult_NVI.ScrollBars = ScrollBars.Vertical;
-            textBoxResult_NVI.Size = new Size(269, 373);
-            textBoxResult_NVI.TabIndex = 0;
-            // 
             // buttonDone_NVI
             // 
-            buttonDone_NVI.BackColor = Color.FromArgb(0, 192, 0);
+            buttonDone_NVI.BackColor = Color.Green;
+            buttonDone_NVI.Cursor = Cursors.Hand;
             buttonDone_NVI.FlatAppearance.BorderColor = Color.DeepSkyBlue;
             buttonDone_NVI.FlatAppearance.BorderSize = 2;
             buttonDone_NVI.FlatStyle = FlatStyle.Flat;
@@ -181,12 +223,55 @@
             buttonDone_NVI.Text = "Выполнить";
             buttonDone_NVI.UseVisualStyleBackColor = false;
             buttonDone_NVI.Click += buttonDone_NVI_Click;
+            buttonDone_NVI.MouseDown += buttonDone_NVI_MouseDown;
+            buttonDone_NVI.MouseEnter += buttonDone_NVI_MouseEnter;
+            buttonDone_NVI.MouseLeave += buttonDone_NVI_MouseLeave;
+            buttonDone_NVI.MouseUp += buttonDone_NVI_MouseUp;
+            // 
+            // chartFunction_NVI
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartFunction_NVI.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartFunction_NVI.Legends.Add(legend1);
+            chartFunction_NVI.Location = new Point(785, 35);
+            chartFunction_NVI.Name = "chartFunction_NVI";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartFunction_NVI.Series.Add(series1);
+            chartFunction_NVI.Size = new Size(439, 403);
+            chartFunction_NVI.TabIndex = 5;
+            chartFunction_NVI.Text = "Функция";
+            // 
+            // formMainBindingSource
+            // 
+            formMainBindingSource.DataSource = typeof(FormMain);
+            // 
+            // ColumnForX_NVI
+            // 
+            ColumnForX_NVI.HeaderText = "X";
+            ColumnForX_NVI.MinimumWidth = 6;
+            ColumnForX_NVI.Name = "ColumnForX_NVI";
+            ColumnForX_NVI.ReadOnly = true;
+            ColumnForX_NVI.Width = 50;
+            // 
+            // ColumnForFunction_NVI
+            // 
+            ColumnForFunction_NVI.HeaderText = "f(x)";
+            ColumnForFunction_NVI.MinimumWidth = 6;
+            ColumnForFunction_NVI.Name = "ColumnForFunction_NVI";
+            ColumnForFunction_NVI.ReadOnly = true;
+            ColumnForFunction_NVI.Width = 115;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 450);
+            ClientSize = new Size(1242, 450);
+            Controls.Add(chartFunction_NVI);
             Controls.Add(buttonDone_NVI);
             Controls.Add(groupBoxResult_NVI);
             Controls.Add(groupBoxTask_NVi);
@@ -194,13 +279,16 @@
             Controls.Add(groupBoxData_NVI);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Спринт 6 | Таск 1 | Вариант 3 | Носков В. И.";
+            Text = "Спринт 6 | Таск 2 | Вариант 27 | Носков В. И.";
             groupBoxData_NVI.ResumeLayout(false);
             groupBoxData_NVI.PerformLayout();
             groupBoxTask_NVi.ResumeLayout(false);
             groupBoxTask_NVi.PerformLayout();
             groupBoxResult_NVI.ResumeLayout(false);
             groupBoxResult_NVI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFunction_NVI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)formMainBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -215,8 +303,12 @@
         private GroupBox groupBoxTask_NVi;
         private TextBox textBox1;
         private GroupBox groupBoxResult_NVI;
-        private TextBox textBoxResult_NVI;
         private Label labelResult_NVI;
         private Button buttonDone_NVI;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartFunction_NVI;
+        private DataGridView dataGridViewFunction_NVI;
+        private BindingSource formMainBindingSource;
+        private DataGridViewTextBoxColumn ColumnForX_NVI;
+        private DataGridViewTextBoxColumn ColumnForFunction_NVI;
     }
 }
