@@ -33,5 +33,6 @@ namespace Tyuiu.NoskovVI.Sprint6.Task0.V9
         {
             MessageBox.Show("Таск 0 выполнил студент группы ПКТб-24-1 Носков Виталий Игоревич", "Сообщение");
         }
+
     }
 }

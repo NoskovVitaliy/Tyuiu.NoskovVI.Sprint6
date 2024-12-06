@@ -5,7 +5,7 @@ namespace Tyuiu.NoskovVI.Sprint6.Task0.V9.Lib
     {
         public double Calculate(int x)
         {
-            return Math.Round((4 - (double)(x * x * x)) / (double)(x * x),3);
+            return Math.Round((4d - (double)(x * x * x)) / (double)(x * x),3);
         }
     }
 }

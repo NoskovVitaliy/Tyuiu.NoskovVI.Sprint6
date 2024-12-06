@@ -50,7 +50,7 @@
             // 
             groupBoxInput_NVI.Controls.Add(textBoxForX_NVI);
             groupBoxInput_NVI.Controls.Add(labelX_NVI);
-            groupBoxInput_NVI.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxInput_NVI.Font = new Font("Leelawadee UI", 9F);
             groupBoxInput_NVI.Location = new Point(19, 185);
             groupBoxInput_NVI.Margin = new Padding(3, 2, 3, 2);
             groupBoxInput_NVI.Name = "groupBoxInput_NVI";
@@ -72,6 +72,7 @@
             // labelX_NVI
             // 
             labelX_NVI.AutoSize = true;
+            labelX_NVI.Font = new Font("Leelawadee UI", 9F);
             labelX_NVI.Location = new Point(18, 36);
             labelX_NVI.Name = "labelX_NVI";
             labelX_NVI.Size = new Size(91, 15);
@@ -82,7 +83,7 @@
             // 
             groupBoxOutput_NVI.Controls.Add(labelResult_NVI);
             groupBoxOutput_NVI.Controls.Add(textBoxDone_NVI);
-            groupBoxOutput_NVI.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxOutput_NVI.Font = new Font("Leelawadee UI", 9F);
             groupBoxOutput_NVI.Location = new Point(301, 185);
             groupBoxOutput_NVI.Margin = new Padding(3, 2, 3, 2);
             groupBoxOutput_NVI.Name = "groupBoxOutput_NVI";
@@ -95,6 +96,7 @@
             // labelResult_NVI
             // 
             labelResult_NVI.AutoSize = true;
+            labelResult_NVI.Font = new Font("Leelawadee UI", 9F);
             labelResult_NVI.Location = new Point(18, 35);
             labelResult_NVI.Name = "labelResult_NVI";
             labelResult_NVI.Size = new Size(68, 15);
@@ -112,6 +114,7 @@
             // 
             // buttonDone_NVI
             // 
+            buttonDone_NVI.Font = new Font("Leelawadee UI", 9F);
             buttonDone_NVI.Location = new Point(411, 291);
             buttonDone_NVI.Margin = new Padding(3, 2, 3, 2);
             buttonDone_NVI.Name = "buttonDone_NVI";
@@ -124,7 +127,7 @@
             // groupBoxTask_NVI
             // 
             groupBoxTask_NVI.Controls.Add(textBoxTask_NVI);
-            groupBoxTask_NVI.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxTask_NVI.Font = new Font("Leelawadee UI", 9F);
             groupBoxTask_NVI.Location = new Point(19, 11);
             groupBoxTask_NVI.Margin = new Padding(3, 2, 3, 2);
             groupBoxTask_NVI.Name = "groupBoxTask_NVI";
@@ -137,6 +140,7 @@
             // textBoxTask_NVI
             // 
             textBoxTask_NVI.BorderStyle = BorderStyle.None;
+            textBoxTask_NVI.Font = new Font("Leelawadee UI", 9F);
             textBoxTask_NVI.Location = new Point(18, 21);
             textBoxTask_NVI.Name = "textBoxTask_NVI";
             textBoxTask_NVI.ReadOnly = true;
@@ -175,6 +179,7 @@
             Controls.Add(buttonDone_NVI);
             Controls.Add(groupBoxOutput_NVI);
             Controls.Add(groupBoxInput_NVI);
+            Font = new Font("Leelawadee UI", 9F);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormMain";
             Text = "Спринт 6 | Таск 0 | Вариант 9 | Носков В. И.";
