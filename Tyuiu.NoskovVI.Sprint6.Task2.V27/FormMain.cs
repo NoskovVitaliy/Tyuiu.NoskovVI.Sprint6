@@ -18,10 +18,13 @@ namespace Tyuiu.NoskovVI.Sprint6.Task2.V27
 
                 double[] valueArray = ds.GetMassFunction(start, end);
                 this.dataGridViewFunction_NVI.Rows.Clear();
+                this.chartFunction_NVI.Series[0].Points.Clear();
+                this.chartFunction_NVI.Titles.Clear();
                 this.chartFunction_NVI.Titles.Add("График предлагаемой функции");
 
                 this.chartFunction_NVI.ChartAreas[0].AxisX.Title = "Ось Х";
                 this.chartFunction_NVI.ChartAreas[0].AxisY.Title = "Ось У";
+                
 
                 for (int i = 0; i < valueArray.Length; i++)
                 {
