@@ -46,16 +46,16 @@
             groupBoxResult_NVi = new GroupBox();
             textBoxResult_NVI = new TextBox();
             chartFunction_NVI = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            textPanel_NVI = new Panel();
-            seriesPanel_NVi = new Panel();
-            splitterFunction_NVI = new Splitter();
+            splitContainerFuncTable_NVI = new SplitContainer();
             taskPanel_NVI.SuspendLayout();
             groupBoxData_NVI.SuspendLayout();
             groupBoxTop_NVI.SuspendLayout();
             groupBoxResult_NVi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).BeginInit();
-            textPanel_NVI.SuspendLayout();
-            seriesPanel_NVi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainerFuncTable_NVI).BeginInit();
+            splitContainerFuncTable_NVI.Panel1.SuspendLayout();
+            splitContainerFuncTable_NVI.Panel2.SuspendLayout();
+            splitContainerFuncTable_NVI.SuspendLayout();
             SuspendLayout();
             // 
             // taskPanel_NVI
@@ -199,11 +199,11 @@
             // 
             groupBoxResult_NVi.Controls.Add(textBoxResult_NVI);
             groupBoxResult_NVi.Dock = DockStyle.Fill;
-            groupBoxResult_NVi.Location = new Point(3, 2);
-            groupBoxResult_NVi.Margin = new Padding(4, 4, 4, 4);
+            groupBoxResult_NVi.Location = new Point(3, 3);
+            groupBoxResult_NVi.Margin = new Padding(4);
             groupBoxResult_NVi.Name = "groupBoxResult_NVi";
-            groupBoxResult_NVi.Padding = new Padding(4, 4, 4, 4);
-            groupBoxResult_NVi.Size = new Size(230, 338);
+            groupBoxResult_NVi.Padding = new Padding(4);
+            groupBoxResult_NVi.Size = new Size(297, 336);
             groupBoxResult_NVi.TabIndex = 0;
             groupBoxResult_NVi.TabStop = false;
             groupBoxResult_NVi.Text = "Вывод";
@@ -220,7 +220,7 @@
             textBoxResult_NVI.Name = "textBoxResult_NVI";
             textBoxResult_NVI.ReadOnly = true;
             textBoxResult_NVI.ScrollBars = ScrollBars.Vertical;
-            textBoxResult_NVI.Size = new Size(222, 314);
+            textBoxResult_NVI.Size = new Size(289, 312);
             textBoxResult_NVI.TabIndex = 0;
             // 
             // chartFunction_NVI
@@ -239,7 +239,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartFunction_NVI.Series.Add(series1);
-            chartFunction_NVI.Size = new Size(675, 342);
+            chartFunction_NVI.Size = new Size(604, 342);
             chartFunction_NVI.TabIndex = 0;
             chartFunction_NVI.Text = "seriesChart_NVI";
             title1.BackColor = Color.White;
@@ -248,48 +248,31 @@
             title1.Text = "График функции";
             chartFunction_NVI.Titles.Add(title1);
             // 
-            // textPanel_NVI
+            // splitContainerFuncTable_NVI
             // 
-            textPanel_NVI.BackColor = SystemColors.ActiveCaption;
-            textPanel_NVI.Controls.Add(groupBoxResult_NVi);
-            textPanel_NVI.Dock = DockStyle.Left;
-            textPanel_NVI.Location = new Point(0, 70);
-            textPanel_NVI.Margin = new Padding(3, 2, 3, 2);
-            textPanel_NVI.MaximumSize = new Size(350, 450);
-            textPanel_NVI.MinimumSize = new Size(236, 336);
-            textPanel_NVI.Name = "textPanel_NVI";
-            textPanel_NVI.Padding = new Padding(3, 2, 3, 2);
-            textPanel_NVI.Size = new Size(236, 342);
-            textPanel_NVI.TabIndex = 1;
+            splitContainerFuncTable_NVI.Dock = DockStyle.Fill;
+            splitContainerFuncTable_NVI.Location = new Point(0, 70);
+            splitContainerFuncTable_NVI.Name = "splitContainerFuncTable_NVI";
             // 
-            // seriesPanel_NVi
+            // splitContainerFuncTable_NVI.Panel1
             // 
-            seriesPanel_NVi.Controls.Add(splitterFunction_NVI);
-            seriesPanel_NVi.Controls.Add(chartFunction_NVI);
-            seriesPanel_NVi.Dock = DockStyle.Fill;
-            seriesPanel_NVi.Location = new Point(236, 70);
-            seriesPanel_NVi.Margin = new Padding(3, 2, 3, 2);
-            seriesPanel_NVi.MinimumSize = new Size(438, 300);
-            seriesPanel_NVi.Name = "seriesPanel_NVi";
-            seriesPanel_NVi.Size = new Size(675, 342);
-            seriesPanel_NVi.TabIndex = 2;
+            splitContainerFuncTable_NVI.Panel1.BackColor = SystemColors.ActiveCaption;
+            splitContainerFuncTable_NVI.Panel1.Controls.Add(groupBoxResult_NVi);
+            splitContainerFuncTable_NVI.Panel1.Padding = new Padding(3);
             // 
-            // splitterFunction_NVI
+            // splitContainerFuncTable_NVI.Panel2
             // 
-            splitterFunction_NVI.Location = new Point(0, 0);
-            splitterFunction_NVI.Margin = new Padding(3, 2, 3, 2);
-            splitterFunction_NVI.Name = "splitterFunction_NVI";
-            splitterFunction_NVI.Size = new Size(4, 342);
-            splitterFunction_NVI.TabIndex = 1;
-            splitterFunction_NVI.TabStop = false;
+            splitContainerFuncTable_NVI.Panel2.Controls.Add(chartFunction_NVI);
+            splitContainerFuncTable_NVI.Size = new Size(911, 342);
+            splitContainerFuncTable_NVI.SplitterDistance = 303;
+            splitContainerFuncTable_NVI.TabIndex = 1;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(911, 412);
-            Controls.Add(seriesPanel_NVi);
-            Controls.Add(textPanel_NVI);
+            Controls.Add(splitContainerFuncTable_NVI);
             Controls.Add(taskPanel_NVI);
             Margin = new Padding(3, 2, 3, 2);
             MinimumSize = new Size(927, 451);
@@ -304,8 +287,10 @@
             groupBoxResult_NVi.ResumeLayout(false);
             groupBoxResult_NVi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).EndInit();
-            textPanel_NVI.ResumeLayout(false);
-            seriesPanel_NVi.ResumeLayout(false);
+            splitContainerFuncTable_NVI.Panel1.ResumeLayout(false);
+            splitContainerFuncTable_NVI.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainerFuncTable_NVI).EndInit();
+            splitContainerFuncTable_NVI.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -325,8 +310,6 @@
         private Button buttonSave_NVI;
         private Button buttonDone_NVI;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartFunction_NVI;
-        private Panel textPanel_NVI;
-        private Panel seriesPanel_NVi;
-        private Splitter splitterFunction_NVI;
+        private SplitContainer splitContainerFuncTable_NVI;
     }
 }

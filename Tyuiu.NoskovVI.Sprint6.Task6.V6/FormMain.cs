@@ -22,16 +22,23 @@ namespace Tyuiu.NoskovVI.Sprint6.Task6.V6
 
         private void buttonFindFile_NVI_Click(object sender, EventArgs e)
         {
-            openFileDialogTask_NVI.ShowDialog();
-            string openFilePath = openFileDialogTask_NVI.FileName;
-            foreach(string line in File.ReadLines(openFilePath))
+            try
             {
-                textBoxIn_NVI.AppendText(line+ Environment.NewLine);
+                openFileDialogTask_NVI.ShowDialog();
+                string openFilePath = openFileDialogTask_NVI.FileName;
+                foreach (string line in File.ReadLines(openFilePath))
+                {
+                    textBoxIn_NVI.AppendText(line + Environment.NewLine);
+                }
+                groupBoxInfoEnter_NVI.Text += " " + openFilePath;
+                buttonOutput_NVI.Enabled = true;
             }
-            groupBoxInfoEnter_NVI.Text += " " + openFilePath;
-            buttonOutput_NVI.Enabled = true;
+            catch
+            {
+                MessageBox.Show("Не удалось получить файл", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        
+       
     }
 }

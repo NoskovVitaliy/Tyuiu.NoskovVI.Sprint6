@@ -17,8 +17,14 @@ namespace Tyuiu.NoskovVI.Sprint6.Task4.V19
         {
             try
             {
-                string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask4V19.txt" });
+                string path = @"C:\DataSprint6\Task4Output\OutPutFileTask4V19.txt";
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
                 File.WriteAllText(path, textBoxResult_NVI.Text);
+
+                
 
                 DialogResult dialogResult = MessageBox.Show("Файл OutPutFileTask4V19.txt сохранён успешно!\nОткрыть его в блокноте?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 

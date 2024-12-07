@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.NoskovVI.Sprint6.Task6.V6
+﻿namespace Tyuiu.NoskovVI.Sprint6.Task7.V25
 {
     partial class FormAbout
     {

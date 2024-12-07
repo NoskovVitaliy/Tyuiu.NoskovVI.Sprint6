@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.NoskovVI.Sprint6.Task6.V6
+﻿namespace Tyuiu.NoskovVI.Sprint6.Task7.V25
 {
     partial class FormMain
     {
@@ -31,22 +31,26 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelTools_NVI = new Panel();
+            buttonSaveFile_NVI = new Button();
             buttonFindFile_NVI = new Button();
             buttonOutput_NVI = new Button();
             buttonFormAbout_NVI = new Button();
             groupBoxInfoExit_NVI = new GroupBox();
-            textBoxOut_NVI = new TextBox();
+            dataGridViewOut_NVI = new DataGridView();
             groupBoxInfoEnter_NVI = new GroupBox();
-            textBoxIn_NVI = new TextBox();
+            dataGridViewIn_NVI = new DataGridView();
             openFileDialogTask_NVI = new OpenFileDialog();
             toolTipHelp_NVI = new ToolTip(components);
             panelQuestion_NVI = new Panel();
             groupBoxTask_NVI = new GroupBox();
             textBoxTask_NVI = new TextBox();
             splitContainerTask_NVI = new SplitContainer();
+            saveFileDialogOutput_NVI = new SaveFileDialog();
             panelTools_NVI.SuspendLayout();
             groupBoxInfoExit_NVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOut_NVI).BeginInit();
             groupBoxInfoEnter_NVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewIn_NVI).BeginInit();
             panelQuestion_NVI.SuspendLayout();
             groupBoxTask_NVI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainerTask_NVI).BeginInit();
@@ -58,6 +62,7 @@
             // panelTools_NVI
             // 
             panelTools_NVI.BackColor = SystemColors.ControlLight;
+            panelTools_NVI.Controls.Add(buttonSaveFile_NVI);
             panelTools_NVI.Controls.Add(buttonFindFile_NVI);
             panelTools_NVI.Controls.Add(buttonOutput_NVI);
             panelTools_NVI.Controls.Add(buttonFormAbout_NVI);
@@ -68,6 +73,21 @@
             panelTools_NVI.Padding = new Padding(3, 2, 3, 2);
             panelTools_NVI.Size = new Size(831, 72);
             panelTools_NVI.TabIndex = 0;
+            // 
+            // buttonSaveFile_NVI
+            // 
+            buttonSaveFile_NVI.BackgroundImage = Properties.Resources.Save;
+            buttonSaveFile_NVI.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonSaveFile_NVI.Enabled = false;
+            buttonSaveFile_NVI.FlatStyle = FlatStyle.Flat;
+            buttonSaveFile_NVI.Location = new Point(230, 4);
+            buttonSaveFile_NVI.Name = "buttonSaveFile_NVI";
+            buttonSaveFile_NVI.Size = new Size(107, 63);
+            buttonSaveFile_NVI.TabIndex = 1;
+            toolTipHelp_NVI.SetToolTip(buttonSaveFile_NVI, "Сохранить результат в файл");
+            buttonSaveFile_NVI.UseVisualStyleBackColor = true;
+            buttonSaveFile_NVI.Click += buttonSaveFile_NVI_Click;
+            buttonSaveFile_NVI.MouseEnter += buttonSaveFile_NVI_MouseEnter;
             // 
             // buttonFindFile_NVI
             // 
@@ -83,6 +103,7 @@
             toolTipHelp_NVI.SetToolTip(buttonFindFile_NVI, "Выбрать файл для вводных данных");
             buttonFindFile_NVI.UseVisualStyleBackColor = false;
             buttonFindFile_NVI.Click += buttonFindFile_NVI_Click;
+            buttonFindFile_NVI.MouseEnter += buttonFindFile_NVI_MouseEnter;
             // 
             // buttonOutput_NVI
             // 
@@ -99,6 +120,7 @@
             toolTipHelp_NVI.SetToolTip(buttonOutput_NVI, "Провести действие и вывести результат");
             buttonOutput_NVI.UseVisualStyleBackColor = false;
             buttonOutput_NVI.Click += buttonOutput_NVI_Click;
+            buttonOutput_NVI.MouseEnter += buttonOutput_NVI_MouseEnter;
             // 
             // buttonFormAbout_NVI
             // 
@@ -114,10 +136,11 @@
             toolTipHelp_NVI.SetToolTip(buttonFormAbout_NVI, "Нажмите, чтобы узнать о разработчике программы");
             buttonFormAbout_NVI.UseVisualStyleBackColor = true;
             buttonFormAbout_NVI.Click += buttonFormAbout_NVI_Click;
+            buttonFormAbout_NVI.MouseEnter += buttonFormAbout_NVI_MouseEnter;
             // 
             // groupBoxInfoExit_NVI
             // 
-            groupBoxInfoExit_NVI.Controls.Add(textBoxOut_NVI);
+            groupBoxInfoExit_NVI.Controls.Add(dataGridViewOut_NVI);
             groupBoxInfoExit_NVI.Dock = DockStyle.Fill;
             groupBoxInfoExit_NVI.Location = new Point(3, 3);
             groupBoxInfoExit_NVI.Margin = new Padding(3, 2, 3, 2);
@@ -128,22 +151,22 @@
             groupBoxInfoExit_NVI.TabStop = false;
             groupBoxInfoExit_NVI.Text = "Вывод";
             // 
-            // textBoxOut_NVI
+            // dataGridViewOut_NVI
             // 
-            textBoxOut_NVI.Dock = DockStyle.Fill;
-            textBoxOut_NVI.Font = new Font("Consolas", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxOut_NVI.Location = new Point(3, 18);
-            textBoxOut_NVI.Margin = new Padding(3, 2, 3, 2);
-            textBoxOut_NVI.Multiline = true;
-            textBoxOut_NVI.Name = "textBoxOut_NVI";
-            textBoxOut_NVI.ReadOnly = true;
-            textBoxOut_NVI.ScrollBars = ScrollBars.Both;
-            textBoxOut_NVI.Size = new Size(400, 229);
-            textBoxOut_NVI.TabIndex = 0;
+            dataGridViewOut_NVI.AllowUserToResizeColumns = false;
+            dataGridViewOut_NVI.AllowUserToResizeRows = false;
+            dataGridViewOut_NVI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOut_NVI.ColumnHeadersVisible = false;
+            dataGridViewOut_NVI.Dock = DockStyle.Fill;
+            dataGridViewOut_NVI.Location = new Point(3, 18);
+            dataGridViewOut_NVI.Name = "dataGridViewOut_NVI";
+            dataGridViewOut_NVI.RowHeadersVisible = false;
+            dataGridViewOut_NVI.Size = new Size(400, 229);
+            dataGridViewOut_NVI.TabIndex = 0;
             // 
             // groupBoxInfoEnter_NVI
             // 
-            groupBoxInfoEnter_NVI.Controls.Add(textBoxIn_NVI);
+            groupBoxInfoEnter_NVI.Controls.Add(dataGridViewIn_NVI);
             groupBoxInfoEnter_NVI.Dock = DockStyle.Fill;
             groupBoxInfoEnter_NVI.Location = new Point(3, 3);
             groupBoxInfoEnter_NVI.Margin = new Padding(3, 2, 3, 2);
@@ -154,18 +177,18 @@
             groupBoxInfoEnter_NVI.TabStop = false;
             groupBoxInfoEnter_NVI.Text = "Ввод";
             // 
-            // textBoxIn_NVI
+            // dataGridViewIn_NVI
             // 
-            textBoxIn_NVI.Dock = DockStyle.Fill;
-            textBoxIn_NVI.Font = new Font("Consolas", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxIn_NVI.Location = new Point(3, 18);
-            textBoxIn_NVI.Margin = new Padding(3, 2, 3, 2);
-            textBoxIn_NVI.Multiline = true;
-            textBoxIn_NVI.Name = "textBoxIn_NVI";
-            textBoxIn_NVI.ReadOnly = true;
-            textBoxIn_NVI.ScrollBars = ScrollBars.Both;
-            textBoxIn_NVI.Size = new Size(403, 229);
-            textBoxIn_NVI.TabIndex = 0;
+            dataGridViewIn_NVI.AllowUserToResizeColumns = false;
+            dataGridViewIn_NVI.AllowUserToResizeRows = false;
+            dataGridViewIn_NVI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewIn_NVI.ColumnHeadersVisible = false;
+            dataGridViewIn_NVI.Dock = DockStyle.Fill;
+            dataGridViewIn_NVI.Location = new Point(3, 18);
+            dataGridViewIn_NVI.Name = "dataGridViewIn_NVI";
+            dataGridViewIn_NVI.RowHeadersVisible = false;
+            dataGridViewIn_NVI.Size = new Size(403, 229);
+            dataGridViewIn_NVI.TabIndex = 0;
             // 
             // openFileDialogTask_NVI
             // 
@@ -173,6 +196,7 @@
             // 
             // toolTipHelp_NVI
             // 
+            toolTipHelp_NVI.IsBalloon = true;
             toolTipHelp_NVI.ToolTipTitle = "Подсказка";
             // 
             // panelQuestion_NVI
@@ -243,11 +267,12 @@
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 6 | Таск 6 | Вариант 6 | Носков В. И.";
+            Load += FormMain_Load;
             panelTools_NVI.ResumeLayout(false);
             groupBoxInfoExit_NVI.ResumeLayout(false);
-            groupBoxInfoExit_NVI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOut_NVI).EndInit();
             groupBoxInfoEnter_NVI.ResumeLayout(false);
-            groupBoxInfoEnter_NVI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewIn_NVI).EndInit();
             panelQuestion_NVI.ResumeLayout(false);
             groupBoxTask_NVI.ResumeLayout(false);
             groupBoxTask_NVI.PerformLayout();
@@ -263,8 +288,6 @@
         private Panel panelTools_NVI;
         private GroupBox groupBoxInfoExit_NVI;
         private GroupBox groupBoxInfoEnter_NVI;
-        private TextBox textBoxOut_NVI;
-        private TextBox textBoxIn_NVI;
         private Button buttonFindFile_NVI;
         private Button buttonOutput_NVI;
         private Button buttonFormAbout_NVI;
@@ -274,5 +297,9 @@
         private GroupBox groupBoxTask_NVI;
         private TextBox textBoxTask_NVI;
         private SplitContainer splitContainerTask_NVI;
+        private DataGridView dataGridViewOut_NVI;
+        private DataGridView dataGridViewIn_NVI;
+        private SaveFileDialog saveFileDialogOutput_NVI;
+        private Button buttonSaveFile_NVI;
     }
 }
