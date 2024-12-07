@@ -266,7 +266,7 @@
             MinimumSize = new Size(847, 433);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Спринт 6 | Таск 6 | Вариант 6 | Носков В. И.";
+            Text = "Спринт 6 | Таск 7 | Вариант 25 | Носков В. И.";
             Load += FormMain_Load;
             panelTools_NVI.ResumeLayout(false);
             groupBoxInfoExit_NVI.ResumeLayout(false);
