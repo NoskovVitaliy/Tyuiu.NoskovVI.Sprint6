@@ -16,7 +16,7 @@ namespace Tyuiu.NoskovVI.Sprint6.Task3.V25
 
         private void buttonHelp_NVI_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 3 выполнил студент группы ПКТб-24-1 Носков Виталий Игоревич", "Сообщение");
+            MessageBox.Show("Таск 3 выполнил студент группы ПКТб-24-1 Носков Виталий Игоревич", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void FormMain_Load(object sender, EventArgs e)
         {

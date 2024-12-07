@@ -10,7 +10,7 @@ namespace Tyuiu.NoskovVI.Sprint6.Task4.V19
         DataService ds = new DataService();
         private void buttonHelp_NVI_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 4 выполнил студент группы ПКТб-24-1 Носков Виталий Игоревич", "Сообщение");
+            MessageBox.Show("Таск 4 выполнил студент группы ПКТб-24-1 Носков Виталий Игоревич", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonSave_NVI_Click(object sender, EventArgs e)

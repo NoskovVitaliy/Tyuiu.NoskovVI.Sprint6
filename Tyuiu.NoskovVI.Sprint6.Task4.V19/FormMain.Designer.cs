@@ -43,18 +43,19 @@
             labelVarEnd_NVI = new Label();
             groupBoxTop_NVI = new GroupBox();
             textBoxTask_NVI = new TextBox();
-            textPanel_NVI = new Panel();
             groupBoxResult_NVi = new GroupBox();
             textBoxResult_NVI = new TextBox();
-            seriesPanel_NVi = new Panel();
             chartFunction_NVI = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            textPanel_NVI = new Panel();
+            seriesPanel_NVi = new Panel();
+            splitterFunction_NVI = new Splitter();
             taskPanel_NVI.SuspendLayout();
             groupBoxData_NVI.SuspendLayout();
             groupBoxTop_NVI.SuspendLayout();
-            textPanel_NVI.SuspendLayout();
             groupBoxResult_NVi.SuspendLayout();
-            seriesPanel_NVi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).BeginInit();
+            textPanel_NVI.SuspendLayout();
+            seriesPanel_NVi.SuspendLayout();
             SuspendLayout();
             // 
             // taskPanel_NVI
@@ -183,20 +184,10 @@
             textBoxTask_NVI.TabIndex = 0;
             textBoxTask_NVI.Text = "Произвести табулирование функции на диапазоне [-5;5]\r\nРезультат вывести в textBox и сохранить в OutPutFileTask4V19.txt";
             // 
-            // textPanel_NVI
-            // 
-            textPanel_NVI.BackColor = SystemColors.ActiveCaption;
-            textPanel_NVI.Controls.Add(groupBoxResult_NVi);
-            textPanel_NVI.Dock = DockStyle.Left;
-            textPanel_NVI.Location = new Point(0, 94);
-            textPanel_NVI.Name = "textPanel_NVI";
-            textPanel_NVI.Padding = new Padding(3);
-            textPanel_NVI.Size = new Size(270, 448);
-            textPanel_NVI.TabIndex = 1;
-            // 
             // groupBoxResult_NVi
             // 
             groupBoxResult_NVi.Controls.Add(textBoxResult_NVI);
+            groupBoxResult_NVi.Dock = DockStyle.Fill;
             groupBoxResult_NVi.Location = new Point(3, 3);
             groupBoxResult_NVi.Margin = new Padding(5);
             groupBoxResult_NVi.Name = "groupBoxResult_NVi";
@@ -218,15 +209,6 @@
             textBoxResult_NVI.ScrollBars = ScrollBars.Vertical;
             textBoxResult_NVI.Size = new Size(254, 412);
             textBoxResult_NVI.TabIndex = 0;
-            // 
-            // seriesPanel_NVi
-            // 
-            seriesPanel_NVi.Controls.Add(chartFunction_NVI);
-            seriesPanel_NVi.Dock = DockStyle.Fill;
-            seriesPanel_NVi.Location = new Point(270, 94);
-            seriesPanel_NVi.Name = "seriesPanel_NVi";
-            seriesPanel_NVi.Size = new Size(769, 448);
-            seriesPanel_NVi.TabIndex = 2;
             // 
             // chartFunction_NVI
             // 
@@ -252,6 +234,38 @@
             title1.Text = "График функции";
             chartFunction_NVI.Titles.Add(title1);
             // 
+            // textPanel_NVI
+            // 
+            textPanel_NVI.BackColor = SystemColors.ActiveCaption;
+            textPanel_NVI.Controls.Add(groupBoxResult_NVi);
+            textPanel_NVI.Dock = DockStyle.Left;
+            textPanel_NVI.Location = new Point(0, 94);
+            textPanel_NVI.MaximumSize = new Size(400, 600);
+            textPanel_NVI.MinimumSize = new Size(270, 448);
+            textPanel_NVI.Name = "textPanel_NVI";
+            textPanel_NVI.Padding = new Padding(3);
+            textPanel_NVI.Size = new Size(270, 448);
+            textPanel_NVI.TabIndex = 1;
+            // 
+            // seriesPanel_NVi
+            // 
+            seriesPanel_NVi.Controls.Add(splitterFunction_NVI);
+            seriesPanel_NVi.Controls.Add(chartFunction_NVI);
+            seriesPanel_NVi.Dock = DockStyle.Fill;
+            seriesPanel_NVi.Location = new Point(270, 94);
+            seriesPanel_NVi.MinimumSize = new Size(500, 400);
+            seriesPanel_NVi.Name = "seriesPanel_NVi";
+            seriesPanel_NVi.Size = new Size(769, 448);
+            seriesPanel_NVi.TabIndex = 2;
+            // 
+            // splitterFunction_NVI
+            // 
+            splitterFunction_NVI.Location = new Point(0, 0);
+            splitterFunction_NVI.Name = "splitterFunction_NVI";
+            splitterFunction_NVI.Size = new Size(4, 448);
+            splitterFunction_NVI.TabIndex = 1;
+            splitterFunction_NVI.TabStop = false;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -260,7 +274,7 @@
             Controls.Add(seriesPanel_NVi);
             Controls.Add(textPanel_NVI);
             Controls.Add(taskPanel_NVI);
-            MinimumSize = new Size(1033, 589);
+            MinimumSize = new Size(1057, 589);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 6 | Таск 4 | Вариант 19 | Носков В. И.";
@@ -269,20 +283,17 @@
             groupBoxData_NVI.PerformLayout();
             groupBoxTop_NVI.ResumeLayout(false);
             groupBoxTop_NVI.PerformLayout();
-            textPanel_NVI.ResumeLayout(false);
             groupBoxResult_NVi.ResumeLayout(false);
             groupBoxResult_NVi.PerformLayout();
-            seriesPanel_NVi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chartFunction_NVI).EndInit();
+            textPanel_NVI.ResumeLayout(false);
+            seriesPanel_NVi.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel taskPanel_NVI;
-        private Panel textPanel_NVI;
-        private Panel seriesPanel_NVi;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartFunction_NVI;
         private GroupBox groupBoxResult_NVi;
         private TextBox textBoxResult_NVI;
         private GroupBox groupBoxTop_NVI;
@@ -295,5 +306,9 @@
         private Button buttonHelp_NVI;
         private Button buttonSave_NVI;
         private Button buttonDone_NVI;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartFunction_NVI;
+        private Panel textPanel_NVI;
+        private Panel seriesPanel_NVi;
+        private Splitter splitterFunction_NVI;
     }
 }
