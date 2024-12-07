@@ -14,7 +14,7 @@ namespace Tyuiu.NoskovVI.Sprint6.Task6.V6.Lib
                     foreach (string word in line.Split())
                     {
 
-                        if (word.Contains('b')) result += line + " ";
+                        if (word.Contains('b')) result += word + " ";
                     }
                 }
             }
