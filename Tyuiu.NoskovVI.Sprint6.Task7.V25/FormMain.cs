@@ -1,3 +1,4 @@
+using System.IO;
 using Tyuiu.NoskovVI.Sprint6.Task7.V25.Lib;
 namespace Tyuiu.NoskovVI.Sprint6.Task7.V25
 {
@@ -11,17 +12,26 @@ namespace Tyuiu.NoskovVI.Sprint6.Task7.V25
             saveFileDialogOutput_NVI.Filter = "Значения, разделённые запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
         DataService ds = new DataService();
-        private static int[,] MatrixChange(int[,] matrix)
+        private static int[,] OldMatrix(string path)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            string[] lines = File.ReadAllText(path).Split("\n");
+            int rows = File.ReadLines(path).Count();
+            int columns = lines[0].Split(";").Length;
+            int[,] matrix = new int[rows, columns];
+
+            for (int i = 0; i < rows; i++)
             {
-                if (matrix[i, 6] % 5 == 0) matrix[i, 6] = 2;
+                string[] intLines = lines[i].Split(";");
+                for (int j = 0; j < columns; j++)
+                {
+                    matrix[i, j] = Convert.ToInt32(intLines[j]);
+                }
             }
             return matrix;
         }
         private void buttonOutput_NVI_Click(object sender, EventArgs e)
         {
-            int[,] arrayValues = MatrixChange(ds.GetMatrix(openFileDialogTask_NVI.FileName));
+            int[,] arrayValues = ds.GetMatrix(openFileDialogTask_NVI.FileName);
             for (int i = 0; i < arrayValues.GetLength(0); i++)
             {
                 for (int j = 0; j < arrayValues.GetLength(1); j++)
@@ -43,7 +53,7 @@ namespace Tyuiu.NoskovVI.Sprint6.Task7.V25
             openFileDialogTask_NVI.ShowDialog();
             string openFileName = openFileDialogTask_NVI.FileName;
 
-            int[,] arrayValues = ds.GetMatrix(openFileName);
+            int[,] arrayValues = OldMatrix(openFileName);
 
             dataGridViewIn_NVI.Rows.Clear();
             dataGridViewOut_NVI.Rows.Clear();
