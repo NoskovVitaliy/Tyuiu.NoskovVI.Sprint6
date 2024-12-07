@@ -135,7 +135,7 @@
             panelLeft_NVI.Location = new Point(0, 113);
             panelLeft_NVI.Name = "panelLeft_NVI";
             panelLeft_NVI.Padding = new Padding(3);
-            panelLeft_NVI.Size = new Size(188, 390);
+            panelLeft_NVI.Size = new Size(189, 390);
             panelLeft_NVI.TabIndex = 1;
             // 
             // groupBoxData_NVI
@@ -144,7 +144,7 @@
             groupBoxData_NVI.Dock = DockStyle.Fill;
             groupBoxData_NVI.Location = new Point(3, 3);
             groupBoxData_NVI.Name = "groupBoxData_NVI";
-            groupBoxData_NVI.Size = new Size(182, 384);
+            groupBoxData_NVI.Size = new Size(183, 384);
             groupBoxData_NVI.TabIndex = 0;
             groupBoxData_NVI.TabStop = false;
             groupBoxData_NVI.Text = "Вывод данных";
@@ -160,16 +160,17 @@
             dataGridNums_NVI.RowHeadersVisible = false;
             dataGridNums_NVI.RowHeadersWidth = 51;
             dataGridNums_NVI.ScrollBars = ScrollBars.Vertical;
-            dataGridNums_NVI.Size = new Size(176, 358);
+            dataGridNums_NVI.Size = new Size(177, 358);
             dataGridNums_NVI.TabIndex = 0;
             // 
             // panelFill_NVI
             // 
             panelFill_NVI.Controls.Add(chartFunction_NVI);
             panelFill_NVI.Dock = DockStyle.Fill;
-            panelFill_NVI.Location = new Point(188, 113);
+            panelFill_NVI.Location = new Point(189, 113);
             panelFill_NVI.Name = "panelFill_NVI";
-            panelFill_NVI.Size = new Size(712, 390);
+            panelFill_NVI.Padding = new Padding(7);
+            panelFill_NVI.Size = new Size(711, 390);
             panelFill_NVI.TabIndex = 2;
             // 
             // chartFunction_NVI
@@ -179,7 +180,7 @@
             chartFunction_NVI.Dock = DockStyle.Fill;
             legend1.Name = "Legend1";
             chartFunction_NVI.Legends.Add(legend1);
-            chartFunction_NVI.Location = new Point(0, 0);
+            chartFunction_NVI.Location = new Point(7, 7);
             chartFunction_NVI.Name = "chartFunction_NVI";
             chartFunction_NVI.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
@@ -187,7 +188,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartFunction_NVI.Series.Add(series1);
-            chartFunction_NVI.Size = new Size(712, 390);
+            chartFunction_NVI.Size = new Size(697, 376);
             chartFunction_NVI.TabIndex = 0;
             chartFunction_NVI.Text = "TextChart_NVI";
             // 
