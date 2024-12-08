@@ -71,6 +71,7 @@
             // 
             buttonDone_NVI.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDone_NVI.BackColor = Color.FromArgb(128, 255, 128);
+            buttonDone_NVI.Cursor = Cursors.Hand;
             buttonDone_NVI.FlatStyle = FlatStyle.Flat;
             buttonDone_NVI.Location = new Point(514, 32);
             buttonDone_NVI.Margin = new Padding(3, 2, 3, 2);
@@ -85,6 +86,7 @@
             // 
             buttonFileOpen_NVI.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonFileOpen_NVI.BackColor = Color.DarkTurquoise;
+            buttonFileOpen_NVI.Cursor = Cursors.Hand;
             buttonFileOpen_NVI.FlatStyle = FlatStyle.Flat;
             buttonFileOpen_NVI.Location = new Point(608, 32);
             buttonFileOpen_NVI.Margin = new Padding(3, 2, 3, 2);

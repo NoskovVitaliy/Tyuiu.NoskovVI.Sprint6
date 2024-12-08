@@ -74,6 +74,7 @@
             buttonFindFile_NVI.BackColor = SystemColors.Control;
             buttonFindFile_NVI.BackgroundImage = Properties.Resources.Folder;
             buttonFindFile_NVI.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonFindFile_NVI.Cursor = Cursors.Hand;
             buttonFindFile_NVI.FlatStyle = FlatStyle.Flat;
             buttonFindFile_NVI.Location = new Point(5, 4);
             buttonFindFile_NVI.Margin = new Padding(3, 2, 3, 2);
@@ -89,6 +90,7 @@
             buttonOutput_NVI.BackColor = SystemColors.Control;
             buttonOutput_NVI.BackgroundImage = Properties.Resources.Paste_Tick;
             buttonOutput_NVI.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonOutput_NVI.Cursor = Cursors.Hand;
             buttonOutput_NVI.Enabled = false;
             buttonOutput_NVI.FlatStyle = FlatStyle.Flat;
             buttonOutput_NVI.Location = new Point(117, 4);
